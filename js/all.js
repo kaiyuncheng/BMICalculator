@@ -1,6 +1,7 @@
 const height = document.querySelector('.height');
 const weight = document.querySelector('.weight');
 const submit = document.querySelector('.submit');
+const reset = document.querySelector('.reset');
 const alertDOM = document.querySelector('.alert');
 const totalDOM = document.querySelector('.total');
 const recordDOM = document.querySelector('.record_items');
@@ -33,10 +34,9 @@ const BMIData = {
   },
 };
 
-
 function calculationBMI() {
-  let thisHeight = parseInt(height.value);
-  let thisWeight = parseInt(weight.value);
+  let thisHeight = Number(height.value);
+  let thisWeight = Number(weight.value);
 
   if (!isNaN(thisHeight) && !isNaN(thisWeight)) {
     let now = new Date();
@@ -75,12 +75,19 @@ function calculationBMI() {
   };
 };
 
+function resetAll() {
+  BMIRecord = [];
+  height.value = '';
+  weight.value = '';
+  render();
+}
+
 function render() {
   alertDOM.textContent = '';
   
   let str = '';
   let bmiTotal = 0;
-  let avg; 
+  let avg = 0; 
   BMIRecord.forEach( function(item){
     str =
       `<li class="record_item ${item.status}">
@@ -98,13 +105,15 @@ function render() {
         </li>` + str;
 
     bmiTotal = bmiTotal + parseInt(item.BMI);
-    console.log(bmiTotal);
   });
 
-  avg = (bmiTotal / BMIRecord.length).toFixed(1);
-
+  if(bmiTotal !== 0){
+    avg = (bmiTotal / BMIRecord.length).toFixed(1);
+  }
+  
   totalDOM.innerHTML = `總共有 ${BMIRecord.length} 筆紀錄，平均BMI為 ${avg}`;
   recordDOM.innerHTML = str;
 }
 
 submit.addEventListener('click', calculationBMI);
+reset.addEventListener('click', resetAll);
