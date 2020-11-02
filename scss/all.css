@@ -1,0 +1,437 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* my custom reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+button:hover, button:focus {
+  outline: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover,
+input[type=button]:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: 'Noto Sans', 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 30px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3D82AD;
+  letter-spacing: 0.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    letter-spacing: 0.2rem;
+  }
+}
+
+h2 {
+  color: #3D82AD;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  color: #3D82AD;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #306687;
+  color: #ffffff;
+}
+
+.btn_outline {
+  color: #ffffff;
+  background-color: #3D82AD;
+}
+
+.btn_outline:hover {
+  background-color: #306687;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.group .input_group,
+.group .record_group {
+  width: 50%;
+  padding: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  min-height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .group .input_group,
+  .group .record_group {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 30px;
+  }
+}
+
+.group form {
+  width: 100%;
+}
+
+.group .input_group {
+  background-color: #3D82AD;
+  color: #ffffff;
+}
+
+.group .input_group label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.group .input_group input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  background-color: #3D82AD;
+  color: #ffffff;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.group .input_group input:focus {
+  outline: none;
+}
+
+.group .input_group input::-webkit-input-placeholder {
+  color: #B1D7FB;
+}
+
+.group .input_group input:-ms-input-placeholder {
+  color: #B1D7FB;
+}
+
+.group .input_group input::-ms-input-placeholder {
+  color: #B1D7FB;
+}
+
+.group .input_group input::placeholder {
+  color: #B1D7FB;
+}
+
+.group .input_group .alert {
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.group .input_group .submit {
+  margin-bottom: 10px;
+}
+
+.group .record_group {
+  border: 1px solid #3D82AD;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  .group .record_group {
+    overflow-y: visible;
+    height: auto;
+  }
+}
+
+.group .record_group .total {
+  margin-bottom: 10px;
+  color: #3e3e3e;
+}
+
+.group .record_group ul {
+  width: 100%;
+}
+
+.group .record_group ul .record_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #3D82AD;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.group .record_group ul .record_item .time {
+  border-radius: 5px 5px 0 0;
+  padding: 10px 15px;
+  background-color: #3D82AD;
+  color: #ffffff;
+  border-bottom: 1px solid #3D82AD;
+}
+
+.group .record_group ul .record_item .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.group .record_group ul .record_item .result h3 {
+  width: 40%;
+  text-align: center;
+  padding: 15px;
+}
+
+.group .record_group ul .record_item .result .text {
+  width: 60%;
+  border-left: 1px solid #3D82AD;
+  padding: 15px;
+}
+
+.group .record_group ul .record_item .result .text p {
+  padding: 2px;
+}
+
+.group .record_group ul .record_item.overLight {
+  border-color: #6900b5;
+}
+
+.group .record_group ul .record_item.overLight .time {
+  background-color: #6900b5;
+  border-color: #6900b5;
+}
+
+.group .record_group ul .record_item.overLight h3,
+.group .record_group ul .record_item.overLight .text {
+  color: #6900b5;
+  border-color: #6900b5;
+}
+
+.group .record_group ul .record_item.normal {
+  border-color: #0099ff;
+}
+
+.group .record_group ul .record_item.normal .time {
+  background-color: #0099ff;
+  border-color: #0099ff;
+}
+
+.group .record_group ul .record_item.normal h3,
+.group .record_group ul .record_item.normal .text {
+  color: #0099ff;
+  border-color: #0099ff;
+}
+
+.group .record_group ul .record_item.overweight {
+  border-color: #00802f;
+}
+
+.group .record_group ul .record_item.overweight .time {
+  background-color: #00802f;
+  border-color: #00802f;
+}
+
+.group .record_group ul .record_item.overweight h3,
+.group .record_group ul .record_item.overweight .text {
+  color: #00802f;
+  border-color: #00802f;
+}
+
+.group .record_group ul .record_item.lOverweight {
+  border-color: #ffb700;
+}
+
+.group .record_group ul .record_item.lOverweight .time {
+  background-color: #ffb700;
+  border-color: #ffb700;
+}
+
+.group .record_group ul .record_item.lOverweight h3,
+.group .record_group ul .record_item.lOverweight .text {
+  color: #ffb700;
+  border-color: #ffb700;
+}
+
+.group .record_group ul .record_item.mOverweight {
+  border-color: #ff6f00;
+}
+
+.group .record_group ul .record_item.mOverweight .time {
+  background-color: #ff6f00;
+  border-color: #ff6f00;
+}
+
+.group .record_group ul .record_item.mOverweight h3,
+.group .record_group ul .record_item.mOverweight .text {
+  color: #ff6f00;
+  border-color: #ff6f00;
+}
+
+.group .record_group ul .record_item.hOverweight {
+  border-color: #ff0000;
+}
+
+.group .record_group ul .record_item.hOverweight .time {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+.group .record_group ul .record_item.hOverweight h3,
+.group .record_group ul .record_item.hOverweight .text {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康紀錄管理器BMI</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="scss/all.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>BMI健康紀錄管理器</h1>
+    
+    <div class="group">
+      <div class="input_group">
+        <form action="">
+          <label for="height">身高 cm</label>
+          <input class="height" type="text" id="height" placeholder="請輸入身高">
+          <label for="weight">體重 kg</label>
+          <input class="weight" type="text" id="weight" placeholder="請輸入體重">
+
+          <div class="alert"></div>
+
+          <button class="btn submit" type="button">確認</button>
+          <button class="btn btn_outline cxl" type="button">全部清除</button>
+        </form>
+      </div>
+      <div class="record_group">
+        <h2>BMI 紀錄</h2>
+        <p class="total"></p>
+        <ul class="record_items">
+          <li class="record_item">
+            <div class="time">
+              <p>目前無紀錄，趕快來新增吧！</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="js/all.js"></script>
+</body>
+</html>
